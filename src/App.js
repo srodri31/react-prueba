@@ -36,12 +36,12 @@ class App extends Component {
         <div>
           <img width="200" src={this.state.user.photoURL} alt={this.state.user.displayName} />
           <p>Hola {this.state.user.displayName}</p>
-          <button onClick={this.handleLogout}>Logout</button>
+          <button onClick={this.handleLogout} className="btn btn-primary">Logout</button>
         </div>
       );
     }else{
       return(
-        <button onClick={this.handleAuth}>Login con Google</button>
+        <button onClick={this.handleAuth} className="btn btn-primary">Login con Google</button>
       )
     }
   }
@@ -51,6 +51,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2>Welcome to Hello</h2>
+          <h3>My first React App</h3>
         </div>
         <p className="App-intro">
           {this.renderLoginButton()}
