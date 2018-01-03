@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
+import FileUpload from './FileUpload';
 import './App.css';
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
           <img width="200" src={this.state.user.photoURL} alt={this.state.user.displayName} />
           <p>Hola {this.state.user.displayName}</p>
           <button onClick={this.handleLogout} className="btn btn-primary">Logout</button>
+          <FileUpload/>
         </div>
       );
     }else{
@@ -53,9 +55,9 @@ class App extends Component {
           <h2>Welcome to Hello</h2>
           <h3>My first React App</h3>
         </div>
-        <p className="App-intro">
+        <div className="App-intro">
           {this.renderLoginButton()}
-        </p>
+        </div>
       </div>
     );
   }
